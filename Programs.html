@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs - CAC Oke Agbara Monatan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        animation: {
+          fadeIn: 'fadeIn 1s ease-out forwards',
+          slideInUp: 'slideInUp 0.7s ease-out forwards'
+        },
+        keyframes: {
+          fadeIn: {
+            '0%': { opacity: 0 },
+            '100%': { opacity: 1 }
+          },
+          slideInUp: {
+            '0%': { opacity: 0, transform: 'translateY(30px)' },
+            '100%': { opacity: 1, transform: 'translateY(0)' }
+          }
+        }
+      }
+    }
+  }
+</script>
+
+</head>
+<body class="bg-white text-white">
+
+   <!-- Header with background image -->
+   <header class="relative bg-cover bg-center h-[60vh] flex flex-col justify-between"
+   style="background-image : url('proposed cathedral.jpg');">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
+
+    <!-- Top Navigation -->
+    <div class="relative z-10 px-6 py-4 flex items-center max-w-7xl mx-auto">
+
+        <!-- Logo and Name -->
+        <div class="flex items-center space-x-3">
+          <img src="caclogo.png" alt="CAC Logo" class="h-14 w-13" />
+          <h1 class="text-3xl font-bold text-green-300">CAC Oke Agbara</h1>
+        </div>
+      
+        <!-- Spacer to push nav to the right -->
+        <div class="ml-24 hidden md:flex items-center space-x-6 text-sm font-semibold text-white">
+          <a href="index.html" class="hover:text-green-300">Home</a>
+          <a href="about.html" class="hover:text-gray-300">About</a>
+          <a href="sermons.html" class="hover:text-gray-300">Sermons</a>
+          <a href="programs.html" class="hover:text-gray-300">Programs</a>
+          <a href="contact.html" class="hover:text-gray-300">Contact</a>
+          <a href="gallery.html" class="hover:text-gray-300">Gallery</a>
+          <a href="https://www.facebook.com/share/v/1ACzUXEjAL/?mibextid=WC7FNe" target="_blank"
+             class="block bg-green-600 text-white text-center py-2 px-3 rounded-lg shadow hover:bg-green-700 transition">
+            Live Service
+          </a>
+        </div>
+      
+        <!-- Hamburger Toggle -->
+      <div class="md:hidden ml-auto">
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col bg-green-900 text-white px-6 py-4 space-y-3">
+      <a href="index.html" class="block hover:text-green-300">Home</a>
+      <a href="about.html" class="block hover:text-gray-300">About</a>
+      <a href="sermons.html" class="block hover:text-gray-300">Sermons</a>
+      <a href="programs.html" class="block hover:text-gray-300">Programs</a>
+      <a href="contact.html" class="block hover:text-gray-300">Contact</a>
+      <a href="gallery.html" class="block hover:text-gray-300">Gallery</a>
+      <a href="live.html" class="block bg-green-600 text-white text-center py-2 px-3 rounded-lg shadow hover:bg-green-700 transition">
+        Live Service
+      </a>
+    </div>
+  </header>
+
+   <!-- Programs Section -->
+<section id="events" class="py-20 px-6 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-green-500 mb-6">Upcoming Events</h2>
+      <p class="text-lg font-light mb-10">Mark your calendar and join us for these impactful spiritual gatherings:</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <!-- Event Item 1 -->
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="text-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-green-500 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-2">Revival Week</h3>
+          <p class="text-lg text-gray-300"></p>
+          <p class="mt-4 text-gray-400">Join us for a week of revival, prayer, and spiritual renewal. Experience the presence of God like never before!</p>
+        </div>
+  
+        <!-- Event Item 2 -->
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="text-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-green-500 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12" y2="16"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-2">Youth Conference</h3>
+          <p class="text-lg text-gray-300"></p>
+          <p class="mt-4 text-gray-400">A powerful gathering of the youth. Get ready for impactful sessions, games, and an encounter with God.</p>
+        </div>
+  
+        <!-- Event Item 3 -->
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="text-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-green-500 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 1v4M12 19v4M19 12h4M1 12h4"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-2">God of possibilities</h3>
+          <p class="text-lg text-gray-300">Every last friday of the month</p>
+          <p class="mt-4 text-gray-400">An evening of powerful worship, prayer, and drama ministration. Come prepared to be blessed!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-green-900 text-white py-8">
+    <div class="container mx-auto text-center">
+      <div class="mb-6">
+        
+      </div>
+      <div class="space-x-6 text-sm font-semibold">
+        <a href="index.html" class="hover:text-green-300">Home</a>
+        <a href="about.html" class="hover:text-gray-300">About</a>
+        <a href="contact.html" class="hover:text-gray-300">Contact</a>
+        <a href="sermons.html" class="hover:text-gray-300">Sermons</a>
+        <a href="programs.html" class="hover:text-gray-300">Programs</a>
+        <a href="gallery.html" class="hover:text-gray-300">Gallery</a>
+        <a href="#live.html" class="bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 transition">Live Service</a>
+      </div>
+      <div class="mt-6">
+        <p>&copy; 2025 CAC Oke Agbara Monatan. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Toggle -->
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+
+</body>
+</html>

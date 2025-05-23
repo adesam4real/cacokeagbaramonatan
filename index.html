@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAC Oke Agbara Monatan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap');
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /** carousel-slide **/
+  .carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+  }
+
+  .carousel-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .carousel-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header with navigation and background image -->
+  <header class="relative bg-cover bg-center h-[80vh] flex flex-col justify-between" style="background-image: url('proposed cathedral.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
+
+    <style>
+      .rotate-logo {
+        animation: spin 30s linear infinite;
+      }
+    
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    
+    <div class="relative z-10 px-6 py-4 flex items-center max-w-7xl mx-auto">
+      <div class="flex items-center space-x-3">
+        <img src="caclogo.png" alt="CAC Logo" class="h-14 w-13 rotate-logo" />
+        <h1 class="text-3xl font-bold text-green-300">CAC Oke Agbara</h1>
+      </div>
+      <div class="ml-24 hidden md:flex items-center space-x-6 text-sm font-semibold text-white">
+        <a href="#" class="hover:text-green-300">Home</a>
+        <a href="about.html" class="hover:text-gray-300">About</a>
+        <a href="sermons.html" class="hover:text-gray-300">Sermons</a>
+        <a href="Programs.html" class="hover:text-gray-300">Programs</a>
+        <a href="contact.html" class="hover:text-gray-300">Contact</a>
+        <a href="gallery.html" class="hover:text-gray-300">Gallery</a>
+        <a href="https://www.facebook.com/share/v/1ACzUXEjAL/?mibextid=WC7FNe" target="_blank" class="block bg-green-600 text-white text-center py-2 px-3 rounded-lg shadow hover:bg-green-700 transition">
+          Live Service
+        </a>
+       </div>
+      <div class="md:hidden ml-auto">
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 relative z-10">
+      <a href="#" class="block text-sm font-medium hover:text-green-300">Home</a>
+      <a href="#" class="block text-sm font-medium hover:text-green-300">About</a>
+      <a href="#" class="block text-sm font-medium hover:text-green-300">Sermons</a>
+      <a href="#" class="block text-sm font-medium hover:text-green-300">Programs</a>
+      <a href="#" class="block text-sm font-medium hover:text-green-300">Contact</a>
+      <a href="#" class="block text-sm font-medium hover:text-green-300">Gallery</a>
+      <a href="#" class="block bg-green-600 text-white text-center py-2 rounded-lg shadow hover:bg-green-700 transition">Live Service</a>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-0 mt-10 md:mt-0">
+      <h2 class="text-4xl md:text-4xl font-bold leading-tight text-white drop-shadow-lg">
+        Welcome to CAC Oke Agbara Monatan (District Headquarter)
+      </h2>
+      <p class="mt-4 text-lg italic max-w-3xl text-green-100">
+        <b><i>“A Place of Power, Purpose, and Prophetic Grace.” (Jesus Power) </i></b>
+      </p>
+    </div>
+
+  </header>
+
+  <!-- Image Carousel -->
+<section class="relative w-full max-w-5xl mx-auto my-12 overflow-hidden rounded-lg shadow-lg">
+  <div class="relative h-64 sm:h-96">
+    <div class="carousel-slide carousel-visible absolute inset-0 transition-opacity duration-1000">
+      <img src="proposed cathedral.jpg" class="w-full h-full object-cover" alt="Slide 1" />
+    </div>
+
+    <div class="carousel-slide carousel-hidden absolute inset-0 transition-opacity duration-1000">
+      <img src="churchmember2.jpg" class="w-full h-full object-cover" alt="Slide 2" />
+    </div>
+
+    <div class="carousel-slide carousel-hidden absolute inset-0 transition-opacity duration-1000">
+      <img src="churchmember3.jpg" class="w-full h-full object-cover" alt="Slide 3" />
+    </div>
+
+    <div class="carousel-slide carousel-hidden absolute inset-0 transition-opacity duration-1000">
+      <img src="churchmember4.jpg" class="w-full h-full object-cover" alt="Slide 4" />
+    </div>
+
+    <div class="carousel-slide carousel-hidden absolute inset-0 transition-opacity duration-1000">
+      <img src="choirmember.jpg" class="w-full h-full object-cover" alt="Slide 5" />
+    </div>
+    
+    <div class="carousel-slide carousel-hidden absolute inset-0 transition-opacity duration-1000">
+      <img src="media.jpg" class="w-full h-full object-cover" alt="Slide 6" />
+    </div>
+
+    <div class="carousel-slide carousel-hidden absolute inset-0 transition-opacity duration-1000">
+      <img src="choir4.jpg" class="w-full h-full object-cover" alt="Slide 7" />
+    </div>
+
+    <div class="carousel-slide carousel-hidden absolute inset-0 transition-opacity duration-1000">
+      <img src="tom.jpg" class="w-full h-full object-cover" alt="Slide 8" />
+    </div>
+
+    <div class="carousel-slide carousel-hidden absolute inset-0 transition-opacity duration-1000">
+      <img src="churchmember2.jpg" class="w-full h-full object-cover" alt="Slide 9" />
+    </div>
+
+    <div class="carousel-slide carousel-hidden absolute inset-0 transition-opacity duration-1000">
+      <img src="baba.jpg" class="w-full h-full object-cover" alt="Slide 10" />
+    </div>
+    <!-- Left Arrow -->
+    <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75">
+      &#10094;
+    </button>
+
+    <!-- Right Arrow -->
+    <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75">
+      &#10095;
+    </button>
+  </div>
+</section>
+
+ 
+  <!-- Founder -->
+<section class="text-center py-12">
+  <h2 class="text-2xl font-semibold">Our Founder</h2>
+  <div class="mt-4 w-40 h-40 bg-gray-300 mx-auto rounded-full flex items-center justify-center overflow-hidden">
+  <img src="PROPHET M.O OLOWEREE.jpg" alt="Prophet M.O. Oloworee" class="w-full h-full object-cover">
+  </div>
+  <p class="mt-2 font-bold">Prophet M.O. Oloworee</p>
+  <p class="mt-2 text-sm max-w-md mx-auto">A true servant of God whose prophetic insight and obedience established this divine sanctuary.</p>
+</section>
+
+<!-- Page Wrapper -->
+<div class="min-h-screen flex items-center justify-center bg-white">
+  <!-- Pastors Section -->
+  <section class="text-center py-12 bg-gray-100 w-full max-w-7xl px-4">
+    <h2 class="text-2xl font-semibold text-green-700">Our Pastors</h2>
+    <p class="mt-2 text-lg italic">Meet the anointed men and women of God who lead CAC Oke Agbara Monatan.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+      <!-- Pastor 1 -->
+      <div class="overflow-hidden rounded-lg shadow-lg bg-white p-4">
+        <div class="mt-4 w-40 h-40 bg-gray-300 mx-auto rounded-full flex items-center justify-center overflow-hidden">
+          <img src="PASTOR BOBOLA GBOLAGUN (DS).png" alt="Pastor Bobola" class="w-full h-full object-cover">
+        </div>
+        <h3 class="mt-4 font-semibold text-xl text-blue-700">Pastor Bobola Gbolagun</h3>
+        <p class="text-sm text-gray-600">District Pastor</p>
+      </div>
+
+      <!-- Pastor 2 -->
+      <div class="overflow-hidden rounded-lg shadow-lg bg-white p-4">
+        <div class="mt-4 w-[170px] h-[180px] bg-gray-300 mx-auto rounded-full flex items-center justify-center overflow-hidden">
+          <img src="Pastor Alawode.jpeg" alt="Pastor Alawode" class="w-full h-full object-cover">
+        </div>
+        <h3 class="mt-4 font-semibold text-xl text-blue-700">Pastor Alawode</h3>
+        <p class="text-sm text-gray-600">General Secretary CAC Affairs</p>
+      </div> 
+
+      <!-- Pastor 3 -->
+      <div class="overflow-hidden rounded-lg shadow-lg bg-white p-4">
+        <div class="mt-4 w-[170px] h-[180px] bg-gray-300 mx-auto rounded-full flex items-center justify-center overflow-hidden">
+          <img src="PASTOR KEHINDE OLADAYIYENEW.jpeg" alt="Pastor Kehinde" class="w-full h-full object-cover">
+        </div>
+        <h3 class="mt-4 font-semibold text-xl text-blue-700">Pastor Kehinde Oladayiye</h3>
+        <p class="text-sm text-gray-600">Assistant Pastor</p>
+      </div>
+
+      <!-- Pastor 4 -->
+      <div class="overflow-hidden rounded-lg shadow-lg bg-white p-4">
+        <div class="mt-4 w-[160px] h-[170px] bg-gray-300 mx-auto rounded-full flex items-center justify-center overflow-hidden">
+          <img src="PASTOR MOSES OJUOLAPE.jpeg" alt="Pastor Moses" class="w-full h-full object-cover rounded-full">
+        </div>
+        <h3 class="mt-4 font-semibold text-xl text-blue-700">Pastor Moses Ojuolape</h3>
+        <p class="text-sm text-gray-600"></p>
+      </div>
+
+      <!-- Pastor 5 -->
+      <div class="overflow-hidden rounded-lg shadow-lg bg-white p-4">
+        <div class="mt-4 w-[160px] h-[170px] bg-gray-300 mx-auto rounded-full flex items-center justify-center overflow-hidden">
+          <img src="LadyEvang Akintunde.jpeg" alt="Pastor Moses" class="w-full h-full object-cover rounded-full">
+        </div>
+        <h3 class="mt-4 font-semibold text-xl text-blue-700">Lady Evang Akintunde </h3>
+        <p class="text-sm text-gray-600"></p>
+      </div>
+
+      <!-- Pastor 6 -->
+      <div class="overflow-hidden rounded-lg shadow-lg bg-white p-4">
+        <div class="mt-4 w-[160px] h-[170px] bg-gray-300 mx-auto rounded-full flex items-center justify-center overflow-hidden">
+          <img src="LadyEvang. Taiwo.jpeg" alt="Pastor Moses" class="w-full h-full object-cover rounded-full">
+        </div>
+        <h3 class="mt-4 font-semibold text-xl text-blue-700">Lady/Evang Taiwo</h3>
+        <p class="text-sm text-gray-600"></p>
+      </div>
+
+      <!-- Pastor 7 -->
+      <div class="overflow-hidden rounded-lg shadow-lg bg-white p-4">
+        <div class="mt-4 w-[160px] h-[170px] bg-gray-300 mx-auto rounded-full flex items-center justify-center overflow-hidden">
+          <img src="Lady Evang.jpeg" alt="Pastor Moses" class="w-full h-full object-cover rounded-full">
+        </div>
+        <h3 class="mt-4 font-semibold text-xl text-blue-700">Lady Evang </h3>
+        <p class="text-sm text-gray-600"></p>
+      </div>
+
+      <!-- Pastor 8 -->
+      <div class="overflow-hidden rounded-lg shadow-lg bg-white p-4">
+        <div class="mt-4 w-[160px] h-[170px] bg-gray-300 mx-auto rounded-full flex items-center justify-center overflow-hidden">
+          <img src="Pastor.jpeg" alt="Pastor Moses" class="w-full h-full object-cover rounded-full">
+        </div>
+        <h3 class="mt-4 font-semibold text-xl text-blue-700">Pastor</h3>
+        <p class="text-sm text-gray-600"></p>
+      </div>
+
+      <!-- Pastor 9 -->
+      <div class="overflow-hidden rounded-lg shadow-lg bg-white p-4">
+        <div class="mt-4 w-[160px] h-[170px] bg-gray-300 mx-auto rounded-full flex items-center justify-center overflow-hidden">
+          <img src="Pastor2.jpeg" alt="Pastor Moses" class="w-full h-full object-cover rounded-full">
+        </div>
+        <h3 class="mt-4 font-semibold text-xl text-blue-700">Pastor</h3>
+        <p class="text-sm text-gray-600"></p>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <!-- Upcoming Programs Section -->
+  <section class="py-12 px-6 bg-gray-100 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-semibold text-center">Upcoming Programs</h2>
+    <p class="mt-2 text-lg text-center italic">Join us for these life-changing programs at CAC Oke Agbara Monatan.</p>
+    <div class="mt-6 space-y-4">
+      <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm">
+        <div>
+          <h3 class="font-semibold text-xl">God of possibilities </h3>
+          <p class="text-sm">Date: Every last week of the month (Wed-Friday)</p>
+        </div>
+        <a href="#" class="text-green-600 font-semibold hover:underline"></a>
+      </div>
+      <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm">
+        <div>
+          <h3 class="font-semibold text-xl">Bible Study</h3>
+          <p class="text-sm">Date: Every Tuesday (5p-6pm)</p>
+        </div>
+        <a href="#" class="text-green-600 font-semibold hover:underline"></a>
+      </div>
+      <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm">
+        <div>
+          <h3 class="font-semibold text-xl">Sunday Service</h3>
+          <p class="text-sm">Date: Every sunday of the week (8am-12:30pm)</p>
+        </div>
+        <a href="#" class="text-green-600 font-semibold hover:underline"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission and Location -->
+  <section class="flex flex-col md:flex-row gap-8 mt-12 px-6">
+    <div class="flex-1 bg-yellow-100 p-6 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-semibold text-center">Our Mission</h2>
+      <p class="mt-4 italic text-center">
+        “To preach the undiluted word of God, raise prayerful believers, and demonstrate the power in the name of Jesus.”
+      </p>
+    </div>
+    <div class="flex-1 bg-green-100 p-6 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-semibold text-center">Location & Worship Times</h2>
+      <p class="mt-4 text-center">CAC Oke Agbara, Monatan, Ibadan, Oyo State, Nigeria</p>
+      <ul class="mt-4 space-y-2 text-center">
+        <li>Sunday Worship – 9:00 AM</li>
+        <li>Bible Study – Tuesday, 5:00 PM</li>
+        <li> Mercy Hour – Wednesday, 9:00 AM</li>
+        <li>Prophetic Night – Last Friday of the month</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+  <footer class="bg-green-900 text-white py-8">
+    <div class="container mx-auto text-center">
+      <div class="mb-6">
+        
+      </div>
+      <div class="space-x-6 text-sm font-semibold">
+        <a href="index.html" class="hover:text-green-300">Home</a>
+        <a href="about.html" class="hover:text-gray-300">About</a>
+        <a href="contact.html" class="hover:text-gray-300">Contact</a>
+        <a href="sermons.html" class="hover:text-gray-300">Sermons</a>
+        <a href="Programs.html" class="hover:text-gray-300">Programs</a>
+        <a href="gallery.html" class="hover:text-gray-300">Gallery</a>
+        <a href="#live.html" class="bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 transition">Live Service</a>
+      </div>
+      <div class="mt-6">
+        <p>&copy; 2025 CAC Oke Agbara Monatan. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+      
+<!-- Carousel Script -->
+<script>
+  const slides = document.querySelectorAll('.carousel-slide');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let currentSlide = 0;
+  let intervalId;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('carousel-visible', i === index);
+      slide.classList.toggle('carousel-hidden', i !== index);
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Auto Slide
+  function startAutoSlide() {
+    intervalId = setInterval(nextSlide, 4000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(intervalId);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    stopAutoSlide();
+    nextSlide();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    stopAutoSlide();
+    prevSlide();
+    startAutoSlide();
+  });
+
+  // Initialize
+  showSlide(currentSlide);
+  startAutoSlide();
+</script>
+
+  <!-- Add this script at the end of your body -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
